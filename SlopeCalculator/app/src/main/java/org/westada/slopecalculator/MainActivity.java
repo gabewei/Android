@@ -1,4 +1,4 @@
-package org.westada.gabewcalculator;
+package org.westada.slopecalculator;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setValues() {
-        firstNumEditText = (EditText) findViewById(R.id.firstNumEditText);
-        secondNumEditText = (EditText) findViewById(R.id.secondNumEditText);
+        firstNumEditText = (EditText) findViewById(R.id.xOne);
+        secondNumEditText = (EditText) findViewById(R.id.yOne);
         resultTextView = (TextView) findViewById(R.id.resultTextView);
     }
     @Override
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         subBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               setValues();
+                setValues();
                 double result = getNumberOne(firstNumEditText) - getNumberTwo(secondNumEditText);
                 resultTextView.setText(result + "");
             }
