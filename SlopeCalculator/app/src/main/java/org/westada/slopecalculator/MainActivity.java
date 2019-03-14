@@ -8,79 +8,45 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    EditText firstNumEditText, secondNumEditText;
-    TextView resultTextView;
+    EditText xOneEditText, yOneEditText, xTwoEditText, yTwoEditText;
+    TextView slopeTextView, interceptTextView;
 
 
-    private double getNumberOne(EditText num1) {
-        return Double.parseDouble(num1.getText().toString());
+    private double getXOne(EditText xOneEditText) {
+        return Double.parseDouble(xOneEditText.getText().toString());
     }
-    private double getNumberTwo(EditText num2) {
-        return Double.parseDouble(num2.getText().toString());
+    private double getYOne(EditText yOneEditText) {
+        return Double.parseDouble(yOneEditText.getText().toString());
+    }
+    private double getXTwo(EditText xTwoEditText) {
+        return Double.parseDouble(xTwoEditText.getText().toString());
+    }
+    private double getYTwo(EditText yTwoEditText) {
+        return Double.parseDouble(yTwoEditText.getText().toString());
     }
 
     public void setValues() {
-        firstNumEditText = (EditText) findViewById(R.id.xOne);
-        secondNumEditText = (EditText) findViewById(R.id.yOne);
-        resultTextView = (TextView) findViewById(R.id.resultTextView);
+        xOneEditText = (EditText) findViewById(R.id.xOne);
+        yOneEditText = (EditText) findViewById(R.id.yOne);
+        xTwoEditText = (EditText) findViewById(R.id.xTwo);
+        yTwoEditText = (EditText) findViewById(R.id.yTwo);
+        slopeTextView = (TextView) findViewById(R.id.slopeTextView);
+        interceptTextView = (TextView) findViewById(R.id.interceptTextView);
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button addBtn = (Button) findViewById(R.id.addBtn);
-        addBtn.setOnClickListener(new View.OnClickListener() {
+        Button calcBtn = (Button) findViewById(R.id.calcBtn);
+        calcBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setValues();
-                double result = getNumberOne(firstNumEditText) + getNumberTwo(secondNumEditText);
-                resultTextView.setText(result + "");
-            }
-        });
-        Button subBtn = (Button) findViewById(R.id.subBtn);
-        subBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setValues();
-                double result = getNumberOne(firstNumEditText) - getNumberTwo(secondNumEditText);
-                resultTextView.setText(result + "");
-            }
-        });
-        Button multBtn = (Button) findViewById(R.id.multBtn);
-        multBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setValues();
-                double result = getNumberOne(firstNumEditText) * getNumberTwo(secondNumEditText);
-                resultTextView.setText(result + "");
-            }
-        });
-        Button divBtn = (Button) findViewById(R.id.divBtn);
-        divBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setValues();
-                double result = getNumberOne(firstNumEditText) / getNumberTwo(secondNumEditText);
-                resultTextView.setText(result + "");
-            }
-        });
-        Button powBtn = (Button) findViewById(R.id.powBtn);
-        powBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setValues();
-                double result = Math.pow(getNumberOne(firstNumEditText), getNumberTwo(secondNumEditText));
-                resultTextView.setText(result + "" );
-            }
-        });
-        Button modBtn = (Button) findViewById(R.id.modBtn);
-        modBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                setValues();
-                double result = getNumberOne(firstNumEditText) % getNumberTwo(secondNumEditText);
-                resultTextView.setText(result + "");
+                double slope = (getYTwo(yTwoEditText) - getYOne(yOneEditText)) / (getXTwo(xTwoEditText) - getXOne(xOneEditText));
+                slopeTextView.setText(slope + "");
+                double intercept = (getYOne(yOneEditText) - slope * (getXOne(xOneEditText)));
+                interceptTextView.setText("(0, " + intercept + ")");
             }
         });
 
