@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity {
@@ -22,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Resources res = getResources();
-        myListView = (ListView) findViewById(R.id.myListView);
+        myListView = findViewById(R.id.myListView);
         items = res.getStringArray(R.array.items);
         prices = res.getStringArray(R.array.prices);
         descriptions = res.getStringArray(R.array.descriptions);
@@ -32,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
         myListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent showDetailActivity = new Intent(getApplicationContext(), DetailActivity.class);
-                showDetailActivity.putExtra("westada.org.ITEM_INDEX", i);
+                showDetailActivity.putExtra("org.westada.ITEM_INDEX", position);
                 startActivity(showDetailActivity);
             }
         });
