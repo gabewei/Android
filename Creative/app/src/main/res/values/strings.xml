@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">Gabriel W. | Hydroflask App | March 2019</string>
+
+    <string-array name="items">
+        <item>18 oz. Standard Mouth</item>
+        <item>18 oz. Wide Mouth</item>
+        <item>21 oz. Standard Mouth</item>
+        <item>24 oz. Standard Mouth</item>
+        <item>32 oz. Wide Mouth</item>
+        <item>40 oz. Wide Mouth</item>
+        <item>64 oz. Wide Mouth</item>
+    </string-array>
+
+    <string-array name="prices">
+        <item>$29.95</item>
+        <item>$29.95</item>
+        <item>$32.95</item>
+        <item>$34.95</item>
+        <item>$39.95</item>
+        <item>$42.95</item>
+        <item>$59.95</item>
+    </string-array>
+
+    <string-array name="descriptions">
+
+        <item>
+            Keeping your fluid intake on the upside is easy when you’ve got this portable travel buddy.
+            Whether you’re headed to the gym or a quick jaunt across town, you can easily take your refreshment with you.
+        </item>
+
+        <item>
+            Be ready to take on whatever comes next. Our wide mouth top makes it simple to throw some ice into your
+            beverage and hit the road with this easy to carry bottle size. Perfect for morning hikes, afternoon ski
+            lessons, or evenings by the campfire, our 18 oz Wide Mouth bottle keeps your ice water ice cold for up to
+            24 hours or piping hot up to 12. You can also pair it with our handy Straw Lid and Hydro Flip™ Lid.
+        </item>
+
+        <item>
+            Keep life moving with our 21 oz bottle and Standard Flex Cap. It stashes easily into a small
+            shoulder bag, your pack’s side pocket, or your car cup holder, and holds enough ice cold goodness
+            to keep you going for hours without weighing you down. No wonder it's one of our bestselling water bottles.
+        </item>
+
+        <item>
+            A little more hydration lets you have a little more fun. From mountain trailheads to morning
+            yoga practice, our 24 oz Standard Mouth bottle is just the right size for staying hydrated before,
+            during, and after activity. Our largest Standard Mouth available uses TempShield™ double wall vacuum
+            insulation to keep your water refreshingly ice cold for up to 24 hours. Plus, it resists
+            condensation, so the sides of your bottle stay dry.
+        </item>
+
+        <item>
+            Big enough for a whole day in the backcountry, our 32 oz Wide Mouth bottle is made with
+            professional-grade stainless steel and a wider opening for faster fill. And because it’s
+            designed with TempShield™ double wall vacuum insulation, it keeps your ice water refreshingly
+            ice cold up to 24 hours and hot drinks hot up to 12. Which means you’ll always have the
+            perfect temperature drink.
+        </item>
+
+        <item>
+            From road trips to endless hours at the beach, our 40 oz Wide Mouth bottle keeps you well-hydrated
+            from sun up to sun down. TempShield™ double wall vacuum insulation makes sure your water stays icy cold
+            up to 24 hours or your coffee piping hot up to 12.
+        </item>
+
+        <item>
+            Whether you’re overnighting near Yellowstone or car camping at a festival, our 64 oz Wide Mouth bottle
+            makes sure there’s more than enough refreshment to go around. It’s made with professional-grade stainless
+            steel and TempShield™ double wall vacuum insulation to keep your water refreshingly ice cold or piping
+            hot down to the very last sip.
+        </item>
+
+    </string-array>
+</resources>
