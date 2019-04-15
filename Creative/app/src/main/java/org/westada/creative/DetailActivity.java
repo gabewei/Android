@@ -27,9 +27,13 @@ public class DetailActivity extends AppCompatActivity {
 
     private int getImg(int index) {
         switch (index) {
-            case 0: return R.drawable.peach;
-            case 1: return R.drawable.tomato;
-            case 2: return R.drawable.squash;
+            case 0: return R.drawable.eighteen;
+            case 1: return R.drawable.eighteenwm;
+            case 2: return R.drawable.twentyone;
+            case 3: return R.drawable.twentyfour;
+            case 4: return R.drawable.thirtytwo;
+            case 5: return R.drawable.forty;
+            case 6: return R.drawable.sixtyfour;
             default: return -1;
         }
     }
